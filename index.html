@@ -1,1 +1,332 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"/><link rel="icon" href="/favicon.ico"/><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/><meta name="theme-color" content="#000000"/><meta name="description" content="Please hold still while we locate your pointer..."/><script data-ad-client="ca-pub-6879179484483967" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><script type="text/javascript">var _gaq=_gaq||[];_gaq.push(["_setAccount","UA-32525606-1"]),_gaq.push(["_trackPageview"]),function(){var t=document.createElement("script");t.type="text/javascript",t.async=!0,t.src=("https:"==document.location.protocol?"https://ssl":"http://www")+".google-analytics.com/ga.js";var e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(t,e)}()</script><meta property="og:url" content="https://pointerpointer.com/"/><meta property="og:image" content="https://pointerpointer.com/like3.jpg"/><meta property="og:title" content="pointerpointer.com"/><meta property="og:type" content="website"/><meta property="og:description" content="Please hold still while we locate your pointer..."/><meta property="fb:admins" content="733472609"/><link rel="apple-touch-icon" href="/like3.jpg"/><link rel="manifest" href="/manifest.json"/><title>Pointer Pointer</title><link rel="preload" href="spinner.gif" as="image"><link href="/static/css/main.326af8f0.chunk.css" rel="stylesheet"></head><body><noscript>You need to enable JavaScript to run this app.</noscript><div id="root"></div><script>!function(l){function e(e){for(var r,t,n=e[0],o=e[1],u=e[2],i=0,p=[];i<n.length;i++)t=n[i],Object.prototype.hasOwnProperty.call(a,t)&&a[t]&&p.push(a[t][0]),a[t]=0;for(r in o)Object.prototype.hasOwnProperty.call(o,r)&&(l[r]=o[r]);for(s&&s(e);p.length;)p.shift()();return c.push.apply(c,u||[]),f()}function f(){for(var e,r=0;r<c.length;r++){for(var t=c[r],n=!0,o=1;o<t.length;o++){var u=t[o];0!==a[u]&&(n=!1)}n&&(c.splice(r--,1),e=i(i.s=t[0]))}return e}var t={},a={1:0},c=[];function i(e){if(t[e])return t[e].exports;var r=t[e]={i:e,l:!1,exports:{}};return l[e].call(r.exports,r,r.exports,i),r.l=!0,r.exports}i.m=l,i.c=t,i.d=function(e,r,t){i.o(e,r)||Object.defineProperty(e,r,{enumerable:!0,get:t})},i.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},i.t=function(r,e){if(1&e&&(r=i(r)),8&e)return r;if(4&e&&"object"==typeof r&&r&&r.__esModule)return r;var t=Object.create(null);if(i.r(t),Object.defineProperty(t,"default",{enumerable:!0,value:r}),2&e&&"string"!=typeof r)for(var n in r)i.d(t,n,function(e){return r[e]}.bind(null,n));return t},i.n=function(e){var r=e&&e.__esModule?function(){return e.default}:function(){return e};return i.d(r,"a",r),r},i.o=function(e,r){return Object.prototype.hasOwnProperty.call(e,r)},i.p="/";var r=this.webpackJsonppointerpointer=this.webpackJsonppointerpointer||[],n=r.push.bind(r);r.push=e,r=r.slice();for(var o=0;o<r.length;o++)e(r[o]);var s=n;f()}([])</script><script src="/static/js/2.7bc288b0.chunk.js"></script><script src="/static/js/main.919b6db1.chunk.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>鼠标样式展示馆</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: #333;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+        
+        header {
+            background: #4a00e0;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        
+        .intro {
+            padding: 25px;
+            text-align: center;
+            background: #f8f9fa;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        .intro p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            margin-bottom: 15px;
+            color: #495057;
+        }
+        
+        .cursors-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 30px;
+        }
+        
+        .cursor-item {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+        
+        .cursor-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .cursor-demo {
+            height: 120px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #f1f3f5;
+            border-bottom: 1px solid #e9ecef;
+            cursor: pointer;
+        }
+        
+        .cursor-info {
+            padding: 20px;
+        }
+        
+        .cursor-info h3 {
+            color: #4a00e0;
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+        
+        .cursor-info p {
+            color: #666;
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+        
+        .cursor-info code {
+            background: #f8f9fa;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            color: #e83e8c;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        
+        .test-area {
+            padding: 30px;
+            text-align: center;
+            background: #f8f9fa;
+            border-top: 1px solid #e9ecef;
+        }
+        
+        .test-area h2 {
+            color: #4a00e0;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+        
+        .test-box {
+            display: inline-block;
+            width: 80%;
+            max-width: 800px;
+            height: 200px;
+            background: white;
+            border: 2px dashed #4a00e0;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 0 auto;
+        }
+        
+        .test-box p {
+            margin-bottom: 15px;
+            color: #495057;
+        }
+        
+        .test-element {
+            display: inline-block;
+            width: 100px;
+            height: 50px;
+            line-height: 50px;
+            margin: 10px;
+            background: #4a00e0;
+            color: white;
+            border-radius: 5px;
+            text-align: center;
+            transition: background 0.3s;
+        }
+        
+        .test-element:hover {
+            background: #3574fc;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #343a40;
+            color: white;
+        }
+        
+        @media (max-width: 768px) {
+            .cursors-container {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>鼠标样式展示馆</h1>
+            <p class="subtitle">探索各种CSS鼠标指针样式，查看它们的效果并获取实现代码</p>
+        </header>
+        
+        <div class="intro">
+            <p>这个页面展示了多种CSS光标样式，您可以将鼠标悬停在每个示例上查看效果，并在下方的测试区域进行体验。</p>
+            <p>点击任意示例可以查看实现代码，在您自己的项目中直接使用这些CSS代码即可实现相应效果。</p>
+        </div>
+        
+        <div class="cursors-container">
+            <div class="cursor-item">
+                <div class="cursor-demo" style="cursor: auto;">
+                    <h3>auto (自动)</h3>
+                </div>
+                <div class="cursor-info">
+                    <h3>auto</h3>
+                    <p>浏览器根据当前上下文决定要显示的光标样式。</p>
+                    <code>cursor: auto;</code>
+                </div>
+            </div>
+            
+            <div class="cursor-item">
+                <div class="cursor-demo" style="cursor: default;">
+                    <h3>default (默认)</h3>
+                </div>
+                <div class="cursor-info">
+                    <h3>default</h3>
+                    <p>通常呈现为箭头，表示默认光标状态。</p>
+                    <code>cursor: default;</code>
+                </div>
+            </div>
+            
+            <div class="cursor-item">
+                <div class="cursor-demo" style="cursor: pointer;">
+                    <h3>pointer (指针)</h3>
+                </div>
+                <div class="cursor-info">
+                    <h3>pointer</h3>
+                    <p>表示链接的可点击性，通常呈现为手形图标。</p>
+                    <code>cursor: pointer;</code>
+                </div>
+            </div>
+            
+            <div class="cursor-item">
+                <div class="cursor-demo" style="cursor: wait;">
+                    <h3>wait (等待)</h3>
+                </div>
+                <div class="cursor-info">
+                    <h3>wait</h3>
+                    <p>表示程序正忙，需要用户等待。</p>
+                    <code>cursor: wait;</code>
+                </div>
+            </div>
+            
+            <div class="cursor-item">
+                <div class="cursor-demo" style="cursor: text;">
+                    <h3>text (文本)</h3>
+                </div>
+                <div class="cursor-info">
+                    <h3>text</h3>
+                    <p>表示文本可被选择，通常呈现为I形光标。</p>
+                    <code>cursor: text;</code>
+                </div>
+            </div>
+            
+            <div class="cursor-item">
+                <div class="cursor-demo" style="cursor: move;">
+                    <h3>move (移动)</h3>
+                </div>
+                <div class="cursor-info">
+                    <h3>move</h3>
+                    <p>表示某物可被移动。</p>
+                    <code>cursor: move;</code>
+                </div>
+            </div>
+            
+            <div class="cursor-item">
+                <div class="cursor-demo" style="cursor: not-allowed;">
+                    <h3>not-allowed (禁止)</h3>
+                </div>
+                <div class="cursor-info">
+                    <h3>not-allowed</h3>
+                    <p>表示请求的操作将不会被执行。</p>
+                    <code>cursor: not-allowed;</code>
+                </div>
+            </div>
+            
+            <div class="cursor-item">
+                <div class="cursor-demo" style="cursor: help;">
+                    <h3>help (帮助)</h3>
+                </div>
+                <div class="cursor-info">
+                    <h3>help</h3>
+                    <p>表示有帮助信息可用。</p>
+                    <code>cursor: help;</code>
+                </div>
+            </div>
+            
+            <div class="cursor-item">
+                <div class="cursor-demo" style="cursor: crosshair;">
+                    <h3>crosshair (十字线)</h3>
+                </div>
+                <div class="cursor-info">
+                    <h3>crosshair</h3>
+                    <p>表示可以精确定位，常用于绘图应用。</p>
+                    <code>cursor: crosshair;</code>
+                </div>
+            </div>
+        </div>
+        
+        <div class="test-area">
+            <h2>测试区域</h2>
+            <div class="test-box">
+                <p>将鼠标移动到下面的元素上测试不同的光标效果：</p>
+                <div class="test-element" style="cursor: auto;">auto</div>
+                <div class="test-element" style="cursor: default;">default</div>
+                <div class="test-element" style="cursor: pointer;">pointer</div>
+                <div class="test-element" style="cursor: wait;">wait</div>
+                <div class="test-element" style="cursor: text;">text</div>
+                <div class="test-element" style="cursor: move;">move</div>
+                <div class="test-element" style="cursor: not-allowed;">not-allowed</div>
+                <div class="test-element" style="cursor: help;">help</div>
+                <div class="test-element" style="cursor: crosshair;">crosshair</div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>© 2023 鼠标样式展示馆 | 使用CSS创建交互式光标效果</p>
+        </footer>
+    </div>
+
+    <script>
+        // 添加点击功能显示代码
+        document.querySelectorAll('.cursor-item').forEach(item => {
+            item.addEventListener('click', function() {
+                const code = this.querySelector('code');
+                alert('代码已复制到剪贴板: ' + code.textContent);
+                // 实际项目中可以使用Clipboard API复制到剪贴板
+            });
+        });
+    </script>
+</body>
+</html>
